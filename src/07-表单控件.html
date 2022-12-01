@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+</head>
+<body>
+    <!-- 
+        表单
+            1.文本框
+                form-control表单元素的样式
+                表单控件的大小 .input-lg、.input-sm
+            2.下拉框
+                .form-control   表单元素的样式
+                multiple="multiple"设置下拉框多选
+            3.文本域
+                .form-control 表单元素的样式
+            4.复选框
+                垂直显示： .checkbox
+                水平显示： .checkbox-inline
+            5.单选框
+                垂直显示： .checkbox
+                水平显示： .checkbox-inline
+            6.按钮
+                1.使用按钮
+                    基础样式  .btn
+                    附加样式  .btn-primary .btn-info .btn-success .btn-warning .btn-link .btn-default .btn-danger
+                2.多标签使用
+                    其他标签可以设置按钮样式设置成按钮效果(a标签 span标签)
+                3.按钮大小
+                    大按钮 btn-lg
+                    正常按钮 btn
+                    小按钮 btn-sm
+                    极小按钮 btn-xs
+                4.按钮禁用
+                    1.通过disabled属性(真正的禁用)
+                    2.通过disabled样式(样式的禁用)
+
+
+     -->    
+     <input type="text"><br>
+     <select>
+        <option>请选择城市</option>
+        <option>上海</option>
+        <option>背景</option>
+     </select><br>
+     <textarea></textarea><br>
+     <input type="checkbox" name="hobby" />唱歌
+     <input type="checkbox" name="hobby" />跳舞<br>
+     <input type="checkbox" name="sex" />男
+     <input type="checkbox" name="sex" />女
+     <br>
+     <button>按钮</button><input type="button" value="按钮">
+     <hr><br>
+     <!-- 文本框：form-control -->
+     <div class="row">
+        <div class="col-md-3">
+            <input type="text" class="form-control"/><br>
+            <input type="text" class="form-control input-lg"/><br>
+            <input type="text" class="form-control input-sm"/><br>
+        </div>
+     </div>
+     <!-- 下拉框 -->
+     <div class="row">
+        <div class="col-md-3">
+            <select class="form-control">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>背景</option>
+             </select><br>
+             <select class="form-control" multiple="multiple">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>背景</option>
+             </select>
+        </div>
+     </div>
+     <br>
+     <!-- 文本域 -->
+     <div class="row">
+        <div class="col-md-3">
+            <textarea class="form-control"></textarea>
+        </div>
+     </div>
+     <hr>
+     
+
+     <!-- 复选框 -->
+     <!-- 垂直显示 -->
+     <div class="row">
+        <div class="col-md-3">
+            <div class="checkbox">
+                <label><input type="checkbox" name="hobby"/>唱歌</label>
+            </div>
+            <div class="checkbox">
+                    <label><input type="checkbox" name="hobby"/>跳舞</label>
+            </div>
+        </div>
+     </div>
+
+     <!-- 水平显示 -->
+     <div class="row">
+        <div class="col-md-3">
+            <label class="checkbox-inline">
+                <input type="checkbox">唱歌
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox">跳舞
+            </label>
+        </div>
+     </div>
+
+
+     <!-- 单选框 -->
+     <!-- 垂直显示 -->
+     <div class="row">
+        <div class="col-md-3">
+            <div class="radio">
+                <label><input type="radio" name="sex"/>男</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="sex"/>女</label>
+            </div>
+        </div>
+     </div>
+
+     <!-- 水平显示 -->
+     <div class="row">
+        <div class="col-md-3">
+            <label  class="radio-inline">
+                <input type="radio" name="sex"/>男
+            </label>
+            <label  class="radio-inline">
+                <input type="radio" name="sex"/>女
+            </label>
+        </div>
+     </div>
+     
+     <!-- 按钮 -->
+     <button class="btn">按钮</button>
+     <button class="btn btn-danger">按钮</button>
+     <button class="btn btn-success">按钮</button>
+     <button class="btn btn-warning">按钮</button>
+     <button class="btn btn-primary">按钮</button>
+     <button class="btn btn-info">按钮</button>
+     <button class="btn btn-link">按钮</button>
+
+     <hr>
+
+     <!-- 通过按钮样式设置其他元素为按钮效果 -->
+     <a href="#" class="btn btn-success">a标签</a>
+     <span class="btn btn-danger">span标签</span>
+     <div class="btn btn-info">div标签</div>
+
+
+     <!-- 设置按钮大小 -->
+     <hr>
+     <button class="btn btn-danger">按钮</button>
+     <button class="btn btn-success btn-lg">按钮</button>
+     <button class="btn btn-warning btn-sm">按钮</button>
+     <button class="btn btn-primary btn-xs">按钮</button>
+
+     <!-- 按钮禁用 -->
+     <hr>
+     <button class="btn btn-primary" disabled="disabled" onclick="alert('我测你们码')">按钮</button>
+     <button class="btn btn-primary disabled"  onclick="alert('我测你们码')">按钮</button>
+</body>
+</html>

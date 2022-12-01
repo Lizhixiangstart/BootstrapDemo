@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <!-- 
+        下拉菜单：
+            1.使用一个类名为dropdown或btn-group的div包裹整个下拉框
+                <div class="dropdown"></div>
+            2.默认向下dorpdown，向上弹起加入，dropup即可
+            3.使用button作为父菜单，使用类名：drop-toggle和自定义data-toggle属性
+            4.在button中通过使用font制作下拉箭头
+            5.下拉菜单项使用一个ul列表，并且定义一个类名dropdown-menu
+            6.分组分割线：li元素添加一个类名 divider来实现添加下拉分割线的功能
+            7.分组标题：li添加类名"dropdown-header"来实现分组的功能
+            8.对齐方式：
+                1）dropdown-menu-left  左对齐，默认样式
+                2）dropdown-menu-right 右对齐
+            9.激活状态： .active和禁用状态.disabled
+     -->
+     <!-- 使用一个类名为dropdown、btn-group的容器进行包裹 -->
+     <div class="container">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenu1" 
+                    data-toggle="dropdown">
+                主题
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Java</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+                </li>
+            </ul>
+        </div>
+     </div>
+
+
+    
+
+</body>
+</html>

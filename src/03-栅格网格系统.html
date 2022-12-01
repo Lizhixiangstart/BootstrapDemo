@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div  style="background-color: skyblue; ">4</div>
+    <div  style="background-color: orange;">8</div>
+
+
+    <!-- 
+        栅格网格系统:
+        1.列组合 
+            列总和不能超过12,大于12,则自动换到下一行
+        2.列偏移
+            只需要在列元素上添加类名"col-md-1 col-md-offset-*"(*代表要偏移的列数),注意总列数+偏移数不能超过12
+        3.列排列
+            列排列其实就是改变列的方向.就是改变列左右浮动,并设置浮动的距离
+            在Bootstrap框架的网格系统中通过添加类名 col-md-push-* 和 col-md-pull-*
+        4.列嵌套
+            Bootstrap框架的网管系统还支持列嵌套
+            你可以在一个列中添加一个或者多个行(row)容器,然后在这个行容器中插入列    
+     -->
+    <!-- 容器 -->
+    <div class="container">
+        <!-- 行 -->
+        <div class="row">
+            <!-- 列元素 
+                    col-xs-数值  col-sm-数值  col-md-数值  col-lg-数值
+            -->
+            <div class="col-md-4  col-lg-4" style="background-color: skyblue; ">4</div>
+            <div class="col-md-8 col-lg-8" style="background-color: orange;">8</div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-2" style="background-color: skyblue; ">2</div>
+            <div class="col-md-10" style="background-color: orange;">10</div>
+        </div>
+        <div class="row">
+            <div class="col-md-1" style="background-color: rgb(33, 107, 168);">1</div>
+            <div class="col-md-1" style="background-color: rgb(53, 183, 21);">1</div>
+            <div class="col-md-1" style="background-color: rgb(47, 33, 73);">1</div>
+            <div class="col-md-1" style="background-color: rgb(227, 238, 246);">1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="background-color: rgb(57, 204, 62);">6</div>
+            <div class="col-md-6" style="background-color: rgb(57, 204, 62);">6</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="background-color: rgb(218, 216, 82);">4</div>
+            <div class="col-md-4" style="background-color: rgb(174, 87, 110);">4</div>
+            <div class="col-md-4" style="background-color: rgb(75, 21, 225);">4</div>
+        </div>
+        <!-- 注意格数不能查过12 -->
+        <div class="row">
+            <div class="col-md-5" style="background-color: rgb(27, 25, 139);">5</div>
+            <div class="col-md-5" style="background-color: rgb(95, 16, 101);">5</div>
+            <div class="col-md-5" style="background-color: rgb(227, 120, 71);">5</div>
+        </div>
+
+        <hr style="">
+        <!-- 列偏移 -->
+        <div class="row">
+            <div class="col-md-1 col-md-offset-1" style="background-color: rgb(34, 228, 16);">1</div>
+            <div class="col-md-1 col-md-offset-1" style="background-color: rgb(213, 145, 19);">1</div>
+            <div class="col-md-1 col-md-offset-1" style="background-color: rgb(112, 15, 109);">1</div>
+            <div class="col-md-1 col-md-offset-1" style="background-color: rgb(254, 52, 21);">1</div>
+        </div>
+
+        <!-- 列排序 -->
+        <div class="row">
+            <div class="col-md-1 col-md-offset-1 col-md-push-1" style="background-color: rgb(69, 243, 234);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-push-1" style="background-color: rgb(112, 102, 84);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-push-1" style="background-color: rgb(145, 216, 46);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-push-2" style="background-color: rgb(57, 42, 187);">1</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1 col-md-offset-1 col-md-pull-1" style="background-color: rgb(41, 232, 232);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-pull-1" style="background-color: rgb(84, 235, 127);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-pull-1" style="background-color: rgb(210, 45, 158);">1</div>
+            <div class="col-md-1 col-md-offset-1 col-md-pull-1" style="background-color: rgb(203, 41, 16);">1</div>
+        </div>
+
+
+        <hr>
+        <!-- 列嵌套 -->
+    <div class="row">
+        <div class="col-md-6" style="background-color: rgb(20, 39, 214);">
+            <div class="row">
+                <div class="col-md-2" style="background-color: rgb(223, 21, 223);">2</div>
+                <div class="col-md-2" style="background-color: rgb(20, 234, 227);">2</div>
+                <div class="col-md-2" style="background-color: rgb(28, 209, 40);">2</div>
+            </div>
+        </div>
+        <div class="col-md-6" style="background-color: rgb(59, 232, 82);">
+            <div class="col-md-3" style="background-color: red;">3</div>
+            <div class="col-md-3" style="background-color: rgb(15, 13, 134);">3</div>
+            <div class="col-md-3" style="background-color: rgb(20, 192, 34);">3</div>
+            <div class="col-md-3" style="background-color: rgb(152, 14, 104);">3</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6" style="background-color: rgb(201, 79, 149);">6</div>
+        <div class="col-sm-6" style="background-color:  rgb(41, 211, 55);">6</div>
+    </div>
+     
+
+
+
+
+    </div>
+
+   
+    
+    
+</body>
+</html>
